@@ -1,0 +1,100 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #008080; /* You can change the background color to match the Windows 95 theme */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.window {
+    background-color: #c3c3c3; /* Window color */
+    border: 2px solid #000000; /* Window border color */
+    width: 500px;
+    height: 400px;
+    box-shadow: 5px 5px 10px #888888;
+    position: absolute;
+}
+
+.title-bar {
+    background-color: #010081; /* Title bar color */
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    border: 1px solid #ffffff;
+}
+
+.title {
+    color: #ffffff; /* Title text color */
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+    .buttons div {
+        width: 18px;
+        height: 18px;
+        margin-left: 5px;
+        background-color: #c3c3c3; /* Adjust the color to match the title bar */
+        border: 1px solid #000000;
+        position: relative;
+    }
+
+.close-button::before,
+.minimize-button::before,
+.maximize-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 2px;
+    background-color: #000;
+}
+
+.close-button::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.minimize-button::before {
+    display: none;
+}
+
+.maximize-button::before {
+    width: 50%;
+}
+
+/* You can add more styles to the buttons to make them look more like the Windows 95 buttons */
+
+.content {
+    padding: 10px;
+    overflow-y: auto;
+    height: 340px;
+}
+
+/* Add additional styles to mimic the Windows 95 interface */
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px;
+}
+
+    .desktop-icon img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 5px;
+    }
+
+    .desktop-icon span {
+        font-size: 12px;
+        color: #000;
+    }
